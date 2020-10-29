@@ -1,14 +1,11 @@
 import React from "react";
-import { Scroll } from "../Scroll";
 import Article from "./Article";
+import { Scroll } from "./Scroll";
 
 const Articles = () => {
   return (
     <Scroll>
-      Latest Articles
-      <Article />
-      <Article />
-      <Article />
+      <Article href="/article" />
       <Article />
       <Article />
     </Scroll>

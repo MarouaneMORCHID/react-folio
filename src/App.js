@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
-import About from "./components/About/About";
 import Articles from "./components/Articles/Articles";
+import Landing from "./components/Landing/Landing";
 import Navbar from "./components/Navbar/Navbar";
 import { StyledDimmer } from "./components/Navbar/Navbar.styled";
 import { GlobalStyles } from "./styles/global";
@@ -16,7 +16,7 @@ const darkTheme = {
 
 const lightTheme = {
   primaryDark: "#ffffff",
-  primaryLight: "#000000",
+  primaryLight: "#757575",
   primaryHover: "#555555",
   mobile: "1366px",
 };
@@ -27,7 +27,7 @@ const NavContainer = styled.div`
 
 function App() {
   const [open, setOpen] = useState(false);
-  const [theme, setTheme] = useState("dark");
+  const [theme, setTheme] = useState("light");
   const node = useRef();
 
   useOnClickOutside(node, () => setOpen(false));
@@ -53,7 +53,7 @@ function App() {
         </NavContainer>
         <GlobalStyles open={open} />
         <div className="body">
-          <About />
+          <Landing />
           <Articles />
         </div>
       </>

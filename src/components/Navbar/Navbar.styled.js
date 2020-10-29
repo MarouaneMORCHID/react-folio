@@ -14,6 +14,7 @@ export const StyledNavbar = styled.nav`
 
   .logo {
     font-size: 1.7rem;
+    background-color: transparent;
     padding-top: 20px;
     z-index: 11;
     cursor: pointer;
@@ -110,6 +111,7 @@ export const StyledBurger = styled.button`
 `;
 
 export const StyledDimmer = styled.div`
+  display: ${({ open }) => (open ? "block" : "none")};
   position: fixed;
   padding: 0;
   margin: 0;
@@ -120,6 +122,6 @@ export const StyledDimmer = styled.div`
   z-index: 5;
   background-color: ${({ open }) =>
     open ? "rgba(0, 0, 0, 0.1)" : "transparent"};
-  backdrop-filter: ${({ open }) => (open ? "blur(5px)" : "blur(0px)")};
+  backdrop-filter: blur(5px);
   transition: backdrop-filter 1s ease;
 `;
