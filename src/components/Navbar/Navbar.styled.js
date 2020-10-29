@@ -5,6 +5,7 @@ export const StyledNavbar = styled.nav`
   max-width: 62.5rem;
   margin: 0px auto;
   height: 10vh;
+  padding: 0 2.5rem;
   justify-content: space-between;
   align-items: center;
   background: inherit;
@@ -12,11 +13,9 @@ export const StyledNavbar = styled.nav`
   z-index: 10;
 
   .logo {
-    letter-spacing: 3px;
-    padding: 0px 20px;
-    font-weight: bold;
-    font-size: 1.4rem;
-    z-index: 10;
+    font-size: 1.7rem;
+    padding-top: 20px;
+    z-index: 11;
   }
   .nav-links {
     display: flex;
@@ -30,7 +29,7 @@ export const StyledNavbar = styled.nav`
     a:after {
       content: ""; /* This is necessary for the pseudo element to work. */
       display: block; /* This will put the pseudo element on its own line. */
-      width: 10%; /* Change this to whatever width you want to have before hover. */
+      width: 0%; /* Change this to whatever width you want to have before hover. */
       padding-top: 3px; /* This creates some space between the element and the border. */
       border-bottom: 0.15rem solid ${({ theme }) => theme.primaryDark}; /* This creates the border. Replace black with whatever color you want. */
       transition: 0.2s; /* This establishes the amount of time in seconds the animation should take from start to finish */
@@ -120,6 +119,6 @@ export const StyledDimmer = styled.div`
   z-index: 5;
   background-color: ${({ open }) =>
     open ? "rgba(0, 0, 0, 0.1)" : "transparent"};
-  backdrop-filter: ${({ open }) => (open ? "blur(2px)" : "blur(0px)")};
+  backdrop-filter: ${({ open }) => (open ? "blur(5px)" : "blur(0px)")};
   transition: backdrop-filter 1s ease;
 `;

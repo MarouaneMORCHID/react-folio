@@ -8,6 +8,6 @@ export const GlobalStyles = createGlobalStyle`
   color: inherit;
   text-decoration: none;
   list-style: none;
-  font-family: "Roboto", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 `;

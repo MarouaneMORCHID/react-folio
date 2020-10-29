@@ -1,8 +1,15 @@
 import React from "react";
-import { StyledAbout } from "./About.styled";
+import { Span, StyledAbout, Subtitle, Title } from "./About.styled";
 
 const About = () => {
-  return <StyledAbout id="about"> Hi im Marouane Morchid </StyledAbout>;
+  return (
+    <StyledAbout id="about">
+      <Title>I'm Marouane!</Title>
+      <Subtitle>
+        I'm a <Span color="tertiary">full-stack web developer</Span>
+      </Subtitle>
+    </StyledAbout>
+  );
 };
 
 export default About;
