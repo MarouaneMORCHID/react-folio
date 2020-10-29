@@ -16,6 +16,7 @@ export const StyledNavbar = styled.nav`
     font-size: 1.7rem;
     padding-top: 20px;
     z-index: 11;
+    cursor: pointer;
   }
   .nav-links {
     display: flex;
@@ -46,7 +47,7 @@ export const StyledNavbar = styled.nav`
       top: 0;
       right: 0;
       height: 100vh;
-      width: 50%;
+      width: 45%;
       font-size: 2rem;
       flex-direction: column;
       align-items: center;

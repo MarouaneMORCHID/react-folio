@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
 import About from "./components/About/About";
+import Articles from "./components/Articles/Articles";
 import Navbar from "./components/Navbar/Navbar";
 import { StyledDimmer } from "./components/Navbar/Navbar.styled";
 import { GlobalStyles } from "./styles/global";
@@ -53,6 +54,7 @@ function App() {
         <GlobalStyles open={open} />
         <div className="body">
           <About />
+          <Articles />
         </div>
       </>
     </ThemeProvider>

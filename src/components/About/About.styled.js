@@ -13,7 +13,13 @@ export const StyledAbout = styled.div`
 
 export const Title = styled.h1`
   display: block;
-  padding-bottom: 10px;
+  font-size: 2rem;
+  line-height: 4rem;
+  @media (width: ${({ theme }) => theme.mobile}) {
+    font-size: 4rem;
+    line-height: 4rem;
+}
+  } ;
 `;
 
 export const Subtitle = styled.h3`

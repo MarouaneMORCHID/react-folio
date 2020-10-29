@@ -4,8 +4,8 @@ import { StyledBurger, StyledNavbar } from "./Navbar.styled";
 const Navbar = ({ open, setOpen }) => {
   return (
     <StyledNavbar open={open}>
-      <div class="logo">Marouane Morchid</div>
-      <ul class="nav-links">
+      <div className="logo">Marouane Morchid</div>
+      <ul className="nav-links">
         <li>
           <a href="#articles" onClick={() => setOpen(false)}>
             Articles
