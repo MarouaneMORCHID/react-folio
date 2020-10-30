@@ -15,7 +15,6 @@ export const StyledNavbar = styled.nav`
   .logo {
     font-size: 1.7rem;
     background-color: transparent;
-    padding-top: 20px;
     z-index: 11;
     cursor: pointer;
   }
@@ -27,6 +26,19 @@ export const StyledNavbar = styled.nav`
     justify-content: space-around;
     align-items: center;
     z-index: 10;
+    button {
+      color: ${({ theme }) => theme.primaryDark};
+      border: 2px solid black;
+      border-radius: 30px;
+      padding: 0.3rem 1.25rem;
+      box-shadow: 0 4px 1px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      box-shadow: ${({ theme }) => theme.primaryLight} 0px 0px 0px inset;
+      &:hover {
+        box-shadow: ${({ theme }) => theme.primaryDark} 0.5rem 0px 0px inset;
+      }
+    }
 
     a:after {
       content: ""; /* This is necessary for the pseudo element to work. */

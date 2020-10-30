@@ -10,14 +10,14 @@ import { useOnClickOutside } from "./styles/hooks";
 const darkTheme = {
   primaryDark: "#202020",
   primaryLight: "#ffffff",
-  primaryHover: "red",
+  primaryHover: "rgba(255,50,50,0.7)",
   mobile: "1366px",
 };
 
 const lightTheme = {
   primaryDark: "#ffffff",
-  primaryLight: "#757575",
-  primaryHover: "#555555",
+  primaryLight: "#303030",
+  primaryHover: "rgba(255,50,50,0.7)",
   mobile: "1366px",
 };
 
@@ -27,29 +27,34 @@ const NavContainer = styled.div`
 
 function App() {
   const [open, setOpen] = useState(false);
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState("Light");
   const node = useRef();
 
   useOnClickOutside(node, () => setOpen(false));
 
   const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
+    if (theme === "Light") {
+      setTheme("Dark");
     } else {
-      setTheme("light");
+      setTheme("Light");
     }
   };
 
   return (
-    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+    <ThemeProvider theme={theme === "Light" ? lightTheme : darkTheme}>
       <>
         <StyledDimmer open={open} />
         <NavContainer ref={node}>
-          {/*<button onClick={toggleTheme}>Toggle theme</button>
+          {/*
           <Logo />
           <Burger open={open} setOpen={setOpen} />
           <Menu open={open} setOpen={setOpen} />*/}
-          <Navbar open={open} setOpen={setOpen} />
+          <Navbar
+            open={open}
+            setOpen={setOpen}
+            toggleTheme={toggleTheme}
+            currentTheme={theme}
+          />
         </NavContainer>
         <GlobalStyles open={open} />
         <div className="body">

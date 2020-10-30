@@ -1,10 +1,10 @@
 import React from "react";
 import { StyledBurger, StyledNavbar } from "./Navbar.styled";
 
-const Navbar = ({ open, setOpen }) => {
+const Navbar = ({ open, setOpen, toggleTheme, currentTheme }) => {
   return (
     <StyledNavbar open={open}>
-      <div className="logo">Marouane Morchid</div>
+      <h1 className="logo">Marouane Morchid</h1>
       <ul className="nav-links">
         <li>
           <a href="#articles" onClick={() => setOpen(false)}>
@@ -25,6 +25,9 @@ const Navbar = ({ open, setOpen }) => {
           <a href="#contact" className="contact" onClick={() => setOpen(false)}>
             Contact
           </a>
+        </li>
+        <li>
+          <button onClick={toggleTheme}>{currentTheme}</button>
         </li>
       </ul>
       <StyledBurger onClick={() => setOpen(!open)} open={open}>

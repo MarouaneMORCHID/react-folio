@@ -28,17 +28,28 @@ export const Subtitle = styled.h3`
 `;
 
 export const Span = styled.span`
-  box-shadow: rgb(255, 244, 217) 0px -1.2rem 0px inset;
+  box-shadow: ${({ theme }) => theme.primaryHover} 0px -1.2rem 0px inset;
 `;
 
 export const StyledSocials = styled.div`
   padding-top: 30px;
-  display: block;
-  justify-content: center;
-  align-items: flex-start;
+  width: 40ch;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
   a {
+    color: ${({ theme }) => theme.primaryDark};
     border: 2px solid black;
     border-radius: 30px;
     padding: 0.3rem 1.25rem;
+    box-shadow: 0 4px 1px;
+
+    transition: all 0.3s ease-in-out;
+    box-shadow: ${({ theme }) => theme.primaryDark} 0px 0px 0px inset;
+    &:hover {
+      box-shadow: ${({ theme }) => theme.primaryDark} 6.5rem 0px 5px inset;
+      color: ${({ theme }) => theme.primaryLight};
+    }
   }
 `;
