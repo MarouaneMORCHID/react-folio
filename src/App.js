@@ -1,15 +1,18 @@
 import React, { useRef, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
+import About from "./components/About/About";
 import Articles from "./components/Articles/Articles";
 import Landing from "./components/Landing/Landing";
 import Navbar from "./components/Navbar/Navbar";
 import { StyledDimmer } from "./components/Navbar/Navbar.styled";
+import Techskills from "./components/Techskills/Techskills";
 import { GlobalStyles } from "./styles/global";
 import { useOnClickOutside } from "./styles/hooks";
 
 const darkTheme = {
   primaryDark: "#202020",
   primaryLight: "#ffffff",
+  primaryShadow: "rgba(0,0,0,0.1)",
   primaryHover: "rgba(255,50,50,0.7)",
   mobile: "1366px",
 };
@@ -17,12 +20,13 @@ const darkTheme = {
 const lightTheme = {
   primaryDark: "#ffffff",
   primaryLight: "#303030",
+  primaryShadow: "rgba(255,255,255,0.1)",
   primaryHover: "rgba(255,50,50,0.7)",
   mobile: "1366px",
 };
 
 const NavContainer = styled.div`
-  background: ${({ theme }) => theme.primaryLight};
+  background: transparent;
 `;
 
 function App() {
@@ -42,13 +46,9 @@ function App() {
 
   return (
     <ThemeProvider theme={theme === "Light" ? lightTheme : darkTheme}>
-      <>
+      <div style={{ margin: "0 auto", maxWidth: "62.5rem" }}>
         <StyledDimmer open={open} />
         <NavContainer ref={node}>
-          {/*
-          <Logo />
-          <Burger open={open} setOpen={setOpen} />
-          <Menu open={open} setOpen={setOpen} />*/}
           <Navbar
             open={open}
             setOpen={setOpen}
@@ -59,10 +59,26 @@ function App() {
         <GlobalStyles open={open} />
         <div className="body">
           <Landing />
+          <SectionTitle>Latest Articles</SectionTitle>
           <Articles />
+          <SectionTitle>About me</SectionTitle>
+          <About />
+          <SectionTitle>Tech Skills</SectionTitle>
+          <Techskills />
+          <SectionTitle>Projects</SectionTitle>
         </div>
-      </>
+      </div>
     </ThemeProvider>
   );
 }
 export default App;
+
+const SectionTitle = styled.h2`
+  margin: 0px auto;
+  max-width: 62.5rem;
+  padding-bottom: 60px;
+  padding-top: 40px;
+  padding-left: 30px;
+  font-size: 28px;
+  color: ${({ theme }) => theme.primaryDark};
+`;

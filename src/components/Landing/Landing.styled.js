@@ -40,10 +40,11 @@ export const StyledSocials = styled.div`
 
   a {
     color: ${({ theme }) => theme.primaryDark};
-    border: 2px solid black;
+    border: 2px solid ${({ theme }) => theme.primaryDark};
     border-radius: 30px;
     padding: 0.3rem 1.25rem;
     box-shadow: 0 4px 1px;
+    font-size: 16px;
 
     transition: all 0.3s ease-in-out;
     box-shadow: ${({ theme }) => theme.primaryDark} 0px 0px 0px inset;

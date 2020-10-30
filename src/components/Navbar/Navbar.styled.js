@@ -27,16 +27,18 @@ export const StyledNavbar = styled.nav`
     align-items: center;
     z-index: 10;
     button {
-      color: ${({ theme }) => theme.primaryDark};
+      outline: none;
+      color: ${({ theme }) => theme.primaryLight};
+      background-color: ${({ theme }) => theme.primaryDark};
       border: 2px solid black;
       border-radius: 30px;
       padding: 0.3rem 1.25rem;
       box-shadow: 0 4px 1px;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
-      box-shadow: ${({ theme }) => theme.primaryLight} 0px 0px 0px inset;
+      box-shadow: ${({ theme }) => theme.primaryDark} 0px 0px 0px inset;
       &:hover {
-        box-shadow: ${({ theme }) => theme.primaryDark} 0.5rem 0px 0px inset;
+        box-shadow: ${({ theme }) => theme.primaryLight} 0.5rem 0rem 0px inset;
       }
     }
 
