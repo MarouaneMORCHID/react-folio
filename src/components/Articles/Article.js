@@ -6,14 +6,12 @@ import {
   StyledArticle,
 } from "./Article.styled";
 
-const Article = () => {
+const Article = ({ url, title, abstract, date }) => {
   return (
-    <StyledArticle>
-      <ArticleTitle>CODING</ArticleTitle>
-      <ArticleContent>
-        This is my latest article about coding in js.
-      </ArticleContent>
-      <ArticleDate>12 October 2020</ArticleDate>
+    <StyledArticle href={url}>
+      <ArticleTitle>{title.toUpperCase()}</ArticleTitle>
+      <ArticleContent>{abstract}</ArticleContent>
+      <ArticleDate>{date}</ArticleDate>
     </StyledArticle>
   );
 };

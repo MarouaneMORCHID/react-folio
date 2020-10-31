@@ -26,6 +26,7 @@ export const StyledNavbar = styled.nav`
     justify-content: space-around;
     align-items: center;
     z-index: 10;
+
     button {
       outline: none;
       color: ${({ theme }) => theme.primaryLight};

@@ -5,6 +5,7 @@ import Articles from "./components/Articles/Articles";
 import Landing from "./components/Landing/Landing";
 import Navbar from "./components/Navbar/Navbar";
 import { StyledDimmer } from "./components/Navbar/Navbar.styled";
+import Projects from "./components/Projects/Projects";
 import Techskills from "./components/Techskills/Techskills";
 import { GlobalStyles } from "./styles/global";
 import { useOnClickOutside } from "./styles/hooks";
@@ -13,16 +14,16 @@ const darkTheme = {
   primaryDark: "#202020",
   primaryLight: "#ffffff",
   primaryShadow: "rgba(0,0,0,0.1)",
-  primaryHover: "rgba(255,50,50,0.7)",
-  mobile: "1366px",
+  primaryHover: "rgba(5,150,250,0.5)",
+  mobile: "900px",
 };
 
 const lightTheme = {
   primaryDark: "#ffffff",
   primaryLight: "#303030",
   primaryShadow: "rgba(255,255,255,0.1)",
-  primaryHover: "rgba(255,50,50,0.7)",
-  mobile: "1366px",
+  primaryHover: "rgba(5,150,250,0.5)",
+  mobile: "900px",
 };
 
 const NavContainer = styled.div`
@@ -31,7 +32,7 @@ const NavContainer = styled.div`
 
 function App() {
   const [open, setOpen] = useState(false);
-  const [theme, setTheme] = useState("Light");
+  const [theme, setTheme] = useState("Dark");
   const node = useRef();
 
   useOnClickOutside(node, () => setOpen(false));
@@ -60,11 +61,14 @@ function App() {
         <div className="body">
           <Landing />
           <SectionTitle>Latest Articles</SectionTitle>
-          <Articles />
+          <Articles id="articles" />
           <SectionTitle>About me</SectionTitle>
-          <About />
+          <About id="about" />
           <SectionTitle>Tech Skills</SectionTitle>
           <Techskills />
+          <SectionTitle>Projects</SectionTitle>
+          <Projects />
+          <SectionTitle>Projects</SectionTitle>
           <SectionTitle>Projects</SectionTitle>
         </div>
       </div>

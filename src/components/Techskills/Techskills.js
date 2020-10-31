@@ -1,26 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Skill from "./Skill";
 import { SkillsContainer } from "./Techskills.styled";
 
 const Techskills = () => {
+  const [skills, setSkills] = useState([
+    "React",
+    "Java",
+    "Spring Boot",
+    "NodeJS",
+    "NodeJS",
+    "NodeJS",
+  ]);
+
   return (
     <SkillsContainer>
-      <Skill />
-      <Skill />
-      <Skill />
-      <Skill />
-      <Skill />
-      <Skill />
-      <Skill />
-      <Skill />
-      <Skill />
-      <Skill />
-      <Skill />
-      <Skill />
-      <Skill />
-      <Skill />
-      <Skill />
-      <Skill />
+      {skills.map((item) => (
+        <Skill>{item}</Skill>
+      ))}
     </SkillsContainer>
   );
 };

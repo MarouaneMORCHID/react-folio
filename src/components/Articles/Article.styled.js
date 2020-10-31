@@ -23,9 +23,9 @@ export const StyledArticle = styled.a`
 `;
 export const ArticleTitle = styled.h4`
   transition: all 0.3s ease-in-out;
-  box-shadow: rgb(242, 242, 242) 0px -0.5rem 0px inset;
+  box-shadow: rgba(250, 230, 30, 0.6) 0px -0.5rem 0px inset;
+  background-color: inherit;
   ${StyledArticle}:hover & {
-    color: ${({ theme }) => theme.primaryLight};
     box-shadow: ${({ theme }) => theme.primaryHover} 0px -1.2rem 0px inset;
   }
 `;

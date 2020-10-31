@@ -4,7 +4,7 @@ import Socials from "./Socials";
 
 const Landing = () => {
   return (
-    <StyledLanding onClick={() => console.log("clicked div")} id="about">
+    <StyledLanding onClick={() => console.log("clicked div")}>
       <Title>I'm Marouane!</Title>
       <Subtitle>
         I'm a <Span>full-stack web developer</Span>

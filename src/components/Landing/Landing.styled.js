@@ -23,12 +23,12 @@ export const Title = styled.h1`
   } ;
 `;
 
-export const Subtitle = styled.h3`
+export const Subtitle = styled.h2`
   display: block;
 `;
 
 export const Span = styled.span`
-  box-shadow: ${({ theme }) => theme.primaryHover} 0px -1.2rem 0px inset;
+  box-shadow: ${({ theme }) => theme.primaryHover} 0px -1.5rem 0px inset;
 `;
 
 export const StyledSocials = styled.div`
