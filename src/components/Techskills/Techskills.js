@@ -3,7 +3,7 @@ import Skill from "./Skill";
 import { SkillsContainer } from "./Techskills.styled";
 
 const Techskills = () => {
-  const [skills, setSkills] = useState([
+  const [skills] = useState([
     "React",
     "Java",
     "NodeJS",
