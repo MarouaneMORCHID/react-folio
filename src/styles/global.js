@@ -1,6 +1,9 @@
 import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
+html{
+  scroll-behavior: smooth;
+}
   * {
     background-color : ${({ theme }) => theme.primaryLight};
   box-sizing: border-box;

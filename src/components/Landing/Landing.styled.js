@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const StyledLanding = styled.div`
   display: flex;
   flex-direction: column;
-  min-height: 60vh;
+  min-height: 65vh;
   max-width: 62.5rem;
   padding: 0 2.5rem;
   margin: 0px auto;
@@ -16,8 +16,9 @@ export const Title = styled.h1`
   display: block;
   font-size: 3rem;
   line-height: 4rem;
-  @media (width: ${({ theme }) => theme.mobile}) {
-    font-size: 4rem;
+  transition: 0.3s ease-in-out;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    font-size: 2rem;
     line-height: 4rem;
 }
   } ;
@@ -25,6 +26,9 @@ export const Title = styled.h1`
 
 export const Subtitle = styled.h2`
   display: block;
+  @media (max-width: ${({ theme }) => theme.mobile}) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const Span = styled.span`
@@ -33,6 +37,7 @@ export const Span = styled.span`
 
 export const StyledSocials = styled.div`
   padding-top: 30px;
+  padding-right: 30px;
   width: 40ch;
   display: flex;
   justify-content: space-between;

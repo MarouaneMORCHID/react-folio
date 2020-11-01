@@ -4,7 +4,8 @@ export const StyledAbout = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-left: 30px;
+  align-items: flex-start;
+  padding-left: 0px;
   text-align: justify;
   @media screen and (max-width: ${({ theme }) => theme.mobile}) {
     flex-direction: column;
@@ -12,8 +13,12 @@ export const StyledAbout = styled.div`
 
   div {
     color: ${({ theme }) => theme.primaryDark};
-    padding-right: 60px;
     padding-bottom: 50px;
+    padding-right: 20px;
+    width: 90%;
+    @media screen and (max-width: ${({ theme }) => theme.mobile}) {
+      padding-right: 0px;
+    }
   }
   img {
     width: 50%;
@@ -25,7 +30,7 @@ export const StyledAbout = styled.div`
       box-shadow: 10px 10px 16px ${({ theme }) => theme.primaryShadow};
     }
     @media screen and (max-width: ${({ theme }) => theme.mobile}) {
-      width: 80%;
+      width: 90%;
     }
   }
 `;

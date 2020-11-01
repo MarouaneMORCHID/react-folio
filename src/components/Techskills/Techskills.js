@@ -6,16 +6,15 @@ const Techskills = () => {
   const [skills, setSkills] = useState([
     "React",
     "Java",
+    "NodeJS",
     "Spring Boot",
-    "NodeJS",
-    "NodeJS",
     "NodeJS",
   ]);
 
   return (
     <SkillsContainer>
-      {skills.map((item) => (
-        <Skill>{item}</Skill>
+      {skills.map((item, index) => (
+        <Skill key={index}>{item}</Skill>
       ))}
     </SkillsContainer>
   );

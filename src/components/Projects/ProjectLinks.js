@@ -6,8 +6,12 @@ import { StyledProjectLinks } from "./Project.styled";
 const ProjectLinks = () => {
   return (
     <StyledProjectLinks>
-      <FaGithub />
-      <FiExternalLink />
+      <a href="hoog.com">
+        <FaGithub size={24} style={{ cursor: "pointer" }} />
+      </a>
+      <a href="link.com">
+        <FiExternalLink size={24} />
+      </a>
     </StyledProjectLinks>
   );
 };

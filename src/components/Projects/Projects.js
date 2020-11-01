@@ -5,8 +5,11 @@ import { ProjectsContainer } from "./Project.styled";
 const Projects = () => {
   return (
     <ProjectsContainer>
+      <Project pair />
       <Project />
+      <Project pair />
       <Project />
+      <Project pair />
       <Project />
     </ProjectsContainer>
   );

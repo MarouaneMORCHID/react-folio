@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import styled, { ThemeProvider } from "styled-components";
+import background from "./assets/background.png";
 import About from "./components/About/About";
 import Articles from "./components/Articles/Articles";
 import Landing from "./components/Landing/Landing";
@@ -14,7 +15,7 @@ const darkTheme = {
   primaryDark: "#202020",
   primaryLight: "#ffffff",
   primaryShadow: "rgba(0,0,0,0.1)",
-  primaryHover: "rgba(5,150,250,0.5)",
+  primaryHover: "rgba(5,255,250,0.5)",
   mobile: "900px",
 };
 
@@ -22,7 +23,7 @@ const lightTheme = {
   primaryDark: "#ffffff",
   primaryLight: "#303030",
   primaryShadow: "rgba(255,255,255,0.1)",
-  primaryHover: "rgba(5,150,250,0.5)",
+  primaryHover: "rgba(5,255,250,0.5)",
   mobile: "900px",
 };
 
@@ -47,8 +48,14 @@ function App() {
 
   return (
     <ThemeProvider theme={theme === "Light" ? lightTheme : darkTheme}>
-      <div style={{ margin: "0 auto", maxWidth: "62.5rem" }}>
+      <div
+        style={{
+          margin: "0 auto",
+          maxWidth: "62.5rem",
+        }}
+      >
         <StyledDimmer open={open} />
+        <StyledBackground />
         <NavContainer ref={node}>
           <Navbar
             open={open}
@@ -60,13 +67,13 @@ function App() {
         <GlobalStyles open={open} />
         <div className="body">
           <Landing />
-          <SectionTitle>Latest Articles</SectionTitle>
-          <Articles id="articles" />
-          <SectionTitle>About me</SectionTitle>
-          <About id="about" />
+          <SectionTitle id="articles">Latest Articles</SectionTitle>
+          <Articles />
+          <SectionTitle id="about">About me</SectionTitle>
+          <About />
           <SectionTitle>Tech Skills</SectionTitle>
           <Techskills />
-          <SectionTitle>Projects</SectionTitle>
+          <SectionTitle id="projects">Projects</SectionTitle>
           <Projects />
           <SectionTitle>Projects</SectionTitle>
           <SectionTitle>Projects</SectionTitle>
@@ -85,4 +92,9 @@ const SectionTitle = styled.h2`
   padding-left: 30px;
   font-size: 28px;
   color: ${({ theme }) => theme.primaryDark};
+`;
+const StyledBackground = styled.div`
+  z-index: 10;
+  background-color: #25008a;
+  background-image: url(${background});
 `;

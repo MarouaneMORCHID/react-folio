@@ -23,12 +23,6 @@ const Articles = () => {
         abstract="Example abstract for  this one"
         date="12 October 2020"
       />
-      <Article
-        url="https://medium.com/test"
-        title="Design"
-        abstract="Example abstract for  this one"
-        date="12 October 2020"
-      />
     </Scroll>
   );
 };

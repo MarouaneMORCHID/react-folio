@@ -12,10 +12,10 @@ import {
 } from "./Project.styled";
 import ProjectLinks from "./ProjectLinks";
 
-const Project = () => {
+const Project = ({ pair, category, title, abstract, tools, git, link }) => {
   return (
     <StyledProject>
-      <ProjectInfo>
+      <ProjectInfo pair={pair}>
         <ProjectCategory>
           <CgGames size={32} />
           <span> Unity Game Development</span>
@@ -25,23 +25,7 @@ const Project = () => {
           This project Eu magna esse cupidatat consectetur laborum excepteur
           fugiat tempor sunt incididunt Lorem laborum cupidatat. Eiusmod ut duis
           reprehenderit excepteur reprehenderit sit fugiat dolor. Duis officia
-          veniam excepteur minim ut irure et sit cupidatat est laboris fugiat
-          veniam excepteur minim ut irure et sit cupidatat est laboris fugiat
-          veniam excepteur minim ut irure et sit cupidatat est laboris fugiat
-          veniam excepteur minim ut irure et sit cupidatat est laboris fugiat
-          aliqua nostrud. Duis excepteur nulla cupidatat id et quis nulla amet
-          fugiat velit do. This project Eu magna esse cupidatat consectetur
-          laborum excepteur fugiat tempor sunt incididunt Lorem laborum
-          cupidatat. Eiusmod ut duis reprehenderit excepteur reprehenderit sit
-          fugiat dolor. Duis officia veniam excepteur minim ut irure et sit
-          cupidatat est laboris fugiat aliqua nostrud. Duis excepteur nulla
-          cupidatat id et quis nulla amet fugiat velit do. fugiat velit do. This
-          project Eu magna esse cupidatat consectetur laborum excepteur fugiat
-          tempor sunt incididunt Lorem laborum cupidatat. Eiusmod ut duis
-          reprehenderit excepteur reprehenderit sit fugiat dolor. Duis officia
-          veniam excepteur minim ut irure et sit cupidatat est laboris fugiat
-          aliqua nostrud. Duis excepteur nulla cupidatat id et quis nulla amet
-          fugiat velit do.
+          veniam excepteur min
         </ProjectAbstract>
         <ProjectTools>
           <Tool>React</Tool>

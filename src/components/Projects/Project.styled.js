@@ -17,18 +17,24 @@ export const StyledProject = styled.div`
 export const ProjectInfo = styled.div`
   display: flex;
   flex-direction: column;
+  order: ${({ pair }) => (pair ? 1 : 2)};
   @media screen and (max-width: ${({ theme }) => theme.mobile}) {
     width: 80%;
     order: 2;
   }
 `;
 export const ProjectCategory = styled.h3`
+  align-items: center;
+  justify-content: center;
   padding: 0px 0px 10px;
 `;
 export const ProjectTitle = styled.h4`
   padding: 10px 0px 10px;
 `;
-export const ProjectAbstract = styled.div``;
+export const ProjectAbstract = styled.div`
+  text-align: left;
+  line-height: 25px;
+`;
 export const ProjectTools = styled.div`
   padding: 20px 0px 50px;
   display: grid;
@@ -40,6 +46,7 @@ export const ProjectImage = styled.img`
   max-height: 450px;
   max-width: 450px;
   border-radius: 30px;
+  order: ${({ pair }) => (pair ? 2 : 1)};
   box-shadow: 0px 8px 8px ${({ theme }) => theme.primaryShadow};
   transition: 0.5s ease-in-out;
   &:hover {
@@ -55,7 +62,11 @@ export const Tool = styled.div`
   display: flex;
   font-weight: 500;
   box-shadow: rgba(250, 230, 30, 0.4) 0px -0.5rem 0px 0 inset;
+  transition: 0.5s;
   justify-content: center;
+  &:hover {
+    box-shadow: rgba(250, 230, 30, 0.4) 0px -1rem 0px 0 inset;
+  }
 `;
 
 export const ProjectsContainer = styled.div`
