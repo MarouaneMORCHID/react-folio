@@ -5,6 +5,7 @@ export const StyledSkill = styled.div`
   min-width: 200px;
   border: 2px solid ${({ theme }) => theme.primaryDark};
   color: ${({ theme }) => theme.primaryDark};
+  background-color: ${({ theme }) => theme.primaryLight};
   padding: 10px 20px 10px;
 `;
 

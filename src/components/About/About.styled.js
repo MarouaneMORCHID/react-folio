@@ -5,10 +5,10 @@ export const StyledAbout = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
-  padding-left: 0px;
   text-align: justify;
   @media screen and (max-width: ${({ theme }) => theme.mobile}) {
     flex-direction: column;
+    align-items: center;
   }
 
   div {
@@ -25,12 +25,13 @@ export const StyledAbout = styled.div`
     border-radius: 30px;
     box-shadow: 0px 8px 8px ${({ theme }) => theme.primaryShadow};
     transition: 0.5s ease-in-out;
+
     &:hover {
       transform: translateY(-10px);
       box-shadow: 10px 10px 16px ${({ theme }) => theme.primaryShadow};
     }
     @media screen and (max-width: ${({ theme }) => theme.mobile}) {
-      width: 90%;
+      width: 80%;
     }
   }
 `;

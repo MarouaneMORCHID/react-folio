@@ -36,10 +36,10 @@ export const ProjectAbstract = styled.div`
   line-height: 25px;
 `;
 export const ProjectTools = styled.div`
-  padding: 20px 0px 50px;
-  display: grid;
-  grid-template-columns: repeat(4, auto);
-  gap: 1rem;
+  margin-top: 1.5rem;
+  line-height: 1.2rem;
+  display: flex;
+  flex-wrap: wrap;
 `;
 export const ProjectImage = styled.img`
   border-radius: 50px;
@@ -58,12 +58,12 @@ export const ProjectImage = styled.img`
     order: 1;
   }
 `;
-export const Tool = styled.div`
-  display: flex;
+export const Tool = styled.span`
   font-weight: 500;
-  box-shadow: rgba(250, 230, 30, 0.4) 0px -0.5rem 0px 0 inset;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: rgba(250, 230, 30, 0.4) 0px -0.2rem 0px 0 inset;
   transition: 0.5s;
-  justify-content: center;
   &:hover {
     box-shadow: rgba(250, 230, 30, 0.4) 0px -1rem 0px 0 inset;
   }
@@ -96,7 +96,15 @@ export const ProjectsContainer = styled.div`
 
 export const StyledProjectLinks = styled.div`
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
   margin-right: 60px;
+
+  a {
+    color: ${({ theme }) => theme.primaryDark};
+    transition: 0.3s ease-in-out;
+    &:hover {
+      color: ${({ theme }) => theme.primaryHover};
+    }
+  }
 `;

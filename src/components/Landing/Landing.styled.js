@@ -45,8 +45,9 @@ export const StyledSocials = styled.div`
 
   a {
     color: ${({ theme }) => theme.primaryDark};
+    background-color: ${({ theme }) => theme.primaryLight};
     border: 2px solid ${({ theme }) => theme.primaryDark};
-    border-radius: 30px;
+    border-radius: 15px;
     padding: 0.3rem 1.25rem;
     font-size: 16px;
     transition: all 0.3s ease-in-out;
