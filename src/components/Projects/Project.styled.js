@@ -43,8 +43,7 @@ export const ProjectTools = styled.div`
 `;
 export const ProjectImage = styled.img`
   border-radius: 50px;
-  max-height: 450px;
-  max-width: 450px;
+  width: 50%;
   border-radius: 30px;
   order: ${({ pair }) => (pair ? 2 : 1)};
   box-shadow: 0px 8px 8px ${({ theme }) => theme.primaryShadow};

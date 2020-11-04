@@ -32,20 +32,6 @@ const Project = ({ pair, category, title, abstract, tools, git, link }) => {
           <Tool>GraphQL</Tool>
           <Tool>Java</Tool>
           <Tool>Java</Tool>
-          <Tool>Java</Tool>
-          <Tool>Java</Tool>
-          <Tool>Java</Tool>
-          <Tool>Java</Tool>
-          <Tool>Java</Tool>
-          <Tool>Java</Tool>
-          <Tool>Java</Tool>
-          <Tool>Java</Tool>
-          <Tool>Java</Tool>
-          <Tool>Java</Tool>
-          <Tool>Java</Tool>
-          <Tool>Java</Tool>
-          <Tool>Java</Tool>
-          <Tool>Java</Tool>
         </ProjectTools>
         <ProjectLinks />
       </ProjectInfo>
